@@ -1,6 +1,6 @@
 import './App.css';
 import {User} from "./User";
-import {Planets} from "./Planets";
+
 
 function App() {
 
@@ -34,9 +34,9 @@ function App() {
         return <User name={user.name} age={user.age} />
       })} */}
 
-      {planets.map( (planet,key) => {
-        if (planet.isGasPlanet) return <h1> {planet.name}</h1>
-      })}
+      {planets.map( (planet,key) => 
+        (!planet.isGasPlanet) && <h1> {planet.name}</h1>
+      )}
 
       {/* {users.map( (user,key) => {
         return (
