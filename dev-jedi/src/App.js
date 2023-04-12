@@ -1,10 +1,49 @@
 import './App.css';
 import {User} from "./User";
+import {useState} from "react";
 
 
 function App() {
 
-  // const age = 20;
+
+  const [count , setCount] = useState(0);
+
+  const increaseCount = () => {
+    setCount(count+1);
+  }
+  const decreaseCount = () => {
+    setCount(count-1);
+  }
+  const setZero = () => {
+    setCount(0);
+  }
+
+
+
+  // Dark MOde Toggle Using states hook
+  // const [ textColor , setTextColor] = useState("white")
+
+  // const toggle = () => {
+  //   textColor === "black" ? setTextColor("white") : setTextColor("black");
+  // }
+
+
+  // Toggle using State hooks
+  // const [showText , setShowText] = useState(false);
+  // const toggleShow = () => {
+  //     setShowText(!showText);
+  // }
+
+  // const handleInputChange = (event) => {
+  //   setInputValue(event.target.value);
+  // }
+
+  // const [age, setAge] = useState(0);
+
+  // const increaseAge = () => {
+  //   setAge(age+1)
+  // }
+
   // const isRed = true;
   // const name = ["Anakin" , "Luke" , "ObiWan" , "Leia" , "Han" , "Padme"]
   // const lis = name.map( (ele) => {
@@ -17,26 +56,59 @@ function App() {
   // ];
 
 
-  const planets = [
-    { name : "Mars" , isGasPlanet : false },
-    { name : "Earth" , isGasPlanet : false },
-    { name : "Jupiter" , isGasPlanet : true },
-    { name : "Venus" , isGasPlanet : false },
-    { name : "Neptune" , isGasPlanet : true },
-    { name : "Uranus" , isGasPlanet : true },
+  // const planets = [
+  //   { name : "Mars" , isGasPlanet : false },
+  //   { name : "Earth" , isGasPlanet : false },
+  //   { name : "Jupiter" , isGasPlanet : true },
+  //   { name : "Venus" , isGasPlanet : false },
+  //   { name : "Neptune" , isGasPlanet : true },
+  //   { name : "Uranus" , isGasPlanet : true },
 
-  ];
+  // ];
+
+
 
   return (
     <div className="App">
+
+
+
+      <button onClick={increaseCount}>Increase</button>
+      <br />
+      <button onClick={decreaseCount}>Decrease</button>
+      <br />
+      <button onClick={setZero}>Set to Zero</button>
+      <br />
+      {count}
+
+
+
+      {/* Dark mode toggle using react states hooks */}
+      {/* <button onClick={toggle}>Dark/Light Mode</button>
+      <br />
+      <h1 style={{color: textColor }}>Whoops!</h1> */}
+
+
+      {/* <button onClick={toggleShow} >Hello There</button>
+      { showText === true && <h1>General Kenobi</h1>} */}
+
+
+      {/* <input type="text" onChange={handleInputChange}/>
+      <br />
+      {inputValue} */}
+
+{/* 
+      {age}
+      <br />
+      <button onClick={increaseAge} >Increase Age</button> */}
 
       {/* {users.map( (user,key) => {
         return <User name={user.name} age={user.age} />
       })} */}
 
-      {planets.map( (planet,key) => 
+      {/* {planets.map( (planet,key) => 
         (!planet.isGasPlanet) && <h1> {planet.name}</h1>
-      )}
+      )} */}
 
       {/* {users.map( (user,key) => {
         return (
