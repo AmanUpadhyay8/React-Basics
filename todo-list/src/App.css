@@ -24,7 +24,7 @@ input[type="text"] {
 
 .addTask {
   height: 30vh;
-  background-color: #85FFBD;
+  background-color: #69ffaf;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -49,6 +49,7 @@ input[type="text"] {
   color: rgb(56, 56, 56); 
   box-shadow: 2px 5px 5px #888888;
 }
+
 
 .list {
   margin-top: 20px;
@@ -80,6 +81,11 @@ input[type="text"] {
   border-radius: 4px;
   background-color: #85FFBD;
   color: rgb(100, 100, 100);
+}
+
+.task button:nth-child(3){
+  width: 80px;
+  
 }
 
 .task button:hover{
