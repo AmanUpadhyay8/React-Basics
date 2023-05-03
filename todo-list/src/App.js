@@ -18,6 +18,7 @@ function App() {
       completed : false,
     };
     setTodoList([...todoList, task]);
+    console.log(task);
   };
 
   const completeTask = (id) => {
